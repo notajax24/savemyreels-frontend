@@ -175,7 +175,9 @@ const Home = () => {
     setLoading(true); // Start loading
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/download?url=${encodeURIComponent(url)}`
+        `https://insta-video-downloader-backend-idqkn1yac-notajax24s-projects.vercel.app/api/download?url=${encodeURIComponent(
+          url
+        )}`
       );
 
       // Check if videoUrl and thumbnail are present in the response
