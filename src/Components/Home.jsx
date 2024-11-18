@@ -12,11 +12,11 @@ const Home = () => {
     videoUrl: null,
     thumbnail: null,
   });
-  const [newVideoUrl, setNewVideoUrl] = useState(null);
+
   const [loading, setLoading] = useState(false); // Track loading state
   const [progress, setProgress] = useState(0);
 
-  const BACKEND_URL = "https://insta-video-downloader-backend.vercel.app:5000";
+  const BACKEND_URL = "https://localhost:5000";
 
   // Function to handle paste button click
   const pasteFromClipboard = async () => {
@@ -36,9 +36,9 @@ const Home = () => {
         `${BACKEND_URL}/api/download?url=${encodeURIComponent(url)}`
       );
 
-      console.log(response.data.videoUrl);
       setNewVideoUrl(response.data.videoUrl);
-      // setVideoData(response.data);
+      console.log(response.data.videoUrl);
+      setVideoData(response.data);
       // Check if videoUrl and thumbnail are present in the response
     } catch (err) {
       setError("Failed to fetch video. Please check the URL.");
@@ -49,10 +49,9 @@ const Home = () => {
   };
 
   const downloadVideo = () => {
-    console.log(newVideoUrl);
-    if (newVideoUrl) {
-      // Use FileSaver.js to download the video with a prompt for file name and location
-      saveAs(newVideoUrl, "savemyreelsapp.mp4");
+    console.log(videoData.videoUrl);
+    if (videoData.videoUrl) {
+      saveAs(videoData.videoUrl, "savemyreels.mp4");
     }
   };
 
@@ -113,7 +112,7 @@ const Home = () => {
 
           {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
 
-          {newVideoUrl && (
+          {videoData.videoUrl && (
             <div className="mt-8 w-full max-w-2xl mx-auto px-4">
               <h2 className="text-xl font-semibold text-center mb-4">
                 Video Preview
@@ -121,11 +120,10 @@ const Home = () => {
               <div className="flex justify-center">
                 <video
                   controls
+                  autoPlay
                   className="flex w-[400px] h-[600px] object-cover rounded-lg"
-                >
-                  <source src={newVideoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  src={videoData.videoUrl}
+                ></video>
               </div>
               <p className="text-center mt-4">
                 <button
@@ -133,7 +131,6 @@ const Home = () => {
                   disabled={loading}
                   className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 w-full block text-center"
                 >
-                  {console.log(videoData.videoUrl)}
                   Download Video
                 </button>
               </p>
