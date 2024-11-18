@@ -15,7 +15,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false); // Track loading state
   const [progress, setProgress] = useState(0);
 
-  const BACKEND_URL = "https://insta-video-downloader-backend.vercel.app";
+  const BACKEND_URL = "http://localhost:5000";
 
   // Function to handle paste button click
   const pasteFromClipboard = async () => {
@@ -34,6 +34,8 @@ const Home = () => {
       const response = await axios.get(
         `${BACKEND_URL}/api/download?url=${encodeURIComponent(url)}`
       );
+
+      console.log(response.data.videoUrl);
 
       // Check if videoUrl and thumbnail are present in the response
       const { videoUrl, thumbnail } = response.data;
