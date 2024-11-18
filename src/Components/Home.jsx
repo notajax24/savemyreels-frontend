@@ -35,7 +35,7 @@ const Home = () => {
         `${BACKEND_URL}/api/download?url=${encodeURIComponent(url)}`
       );
 
-      console.log(response.data.videoUrl);
+      // console.log(response.data.videoUrl);
 
       // Check if videoUrl and thumbnail are present in the response
       const { videoUrl, thumbnail } = response.data;
