@@ -16,7 +16,8 @@ const Home = () => {
   const [loading, setLoading] = useState(false); // Track loading state
   const [progress, setProgress] = useState(0);
 
-  const BACKEND_URL = "http://localhost:5000";
+  // const BACKEND_URL = "http://localhost:5000";
+  const BACKEND_URL = "https://savemyreels-backend.onrender.com";
 
   // Function to handle paste button click
   const pasteFromClipboard = async () => {
