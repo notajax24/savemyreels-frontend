@@ -121,7 +121,6 @@ const Home = () => {
               <div className="flex justify-center">
                 <video
                   controls
-                  autoPlay
                   className="flex w-[400px] h-[600px] object-cover rounded-lg"
                   src={videoData.videoUrl}
                 ></video>
