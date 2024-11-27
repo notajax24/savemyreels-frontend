@@ -50,7 +50,7 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="flex flex-col text-center md:justify-start">
           <h3 className="text-2xl font-semibold mb-4">Connect With Us</h3>
-          <p className="text-gray-400">Email: notajax24@example.com</p>
+          <p className="text-gray-400">Email: notajax24@gmail.com</p>
           <div className="flex space-x-4 mt-4 justify-center">
             <a
               href="https://www.facebook.com/Ajay.jachak24/"
