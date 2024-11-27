@@ -4,10 +4,10 @@ import { FaVideo, FaImages, FaFilm, FaCameraRetro } from "react-icons/fa";
 function AppNav() {
   return (
     <div>
-      <nav className="flex justify-center p-4">
+      <nav className="flex justify-center p-4 mt-4 mb-[-60px]">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Menu items */}
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 ">
             {/* Reels */}
             <a
               href="#reels"

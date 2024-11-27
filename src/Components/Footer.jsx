@@ -50,31 +50,31 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="flex flex-col text-center md:justify-start">
           <h3 className="text-2xl font-semibold mb-4">Connect With Us</h3>
-          <p className="text-gray-400">Email: support@example.com</p>
+          <p className="text-gray-400">Email: notajax24@example.com</p>
           <div className="flex space-x-4 mt-4 justify-center">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/Ajay.jachak24/"
               aria-label="Facebook"
               className="text-gray-400 hover:text-white"
             >
               <FaFacebookF size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/Ajay_jachak24"
               aria-label="Twitter"
               className="text-gray-400 hover:text-white"
             >
               <FaTwitter size={24} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/ajax.pvt"
               aria-label="Instagram"
               className="text-gray-400 hover:text-white"
             >
               <FaInstagram size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://in.linkedin.com/in/ajay-jachak-990964212"
               aria-label="LinkedIn"
               className="text-gray-400 hover:text-white"
             >
