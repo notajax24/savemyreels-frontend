@@ -70,7 +70,7 @@ const Home = () => {
 
   return (
     <>
-      <AppNav />
+      {/* <AppNav /> */}
       <div className="min-h -screen md:w-full bg-dark-blue text-white flex flex-col items-center pt-20 ">
         <div className="min-h-auto md:min-w-[1000px] sm:w-[200px] max-w-sm px-4 py-6 bg-black rounded-lg shadow-lg">
           <div className="flex items-center space-x-2">
